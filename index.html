@@ -5,9 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Favorite Thing </title>
-</head>
-<style>
-    table,
+    <style>
+        body { background-color: beige; }
+        #red-color { color: red; }
+        .blue-color { color: blue; }
+        h1 { color: black; }
+        h2 { font-size: 24px; text-align: left; }
+        
+        /* A new CSS feature: box-shadow */
+        img {
+            width: 300px;
+            height: 200px;
+            box-shadow: 0px 4px 6px rgba(69, 141, 186, 0.962);
+        }
+
+        /* The animation code */
+        @keyframes animation {
+          0%   {background-color: yellow;}
+          50%  {background-color: blue;}
+          100% {background-color: yellow;}
+        }
+
+        /* The element to apply the animation to */
+        .animated-square {
+          width: 100px;
+          height: 100px;
+          background-color: yellow;
+          animation-name: animation;
+          animation-duration: 4s;
+          animation-iteration-count: infinite;
+        }
+        table,
     th,
     td {
         border: 1px solid rgb(88, 22, 22);
@@ -19,23 +47,25 @@
         background-color: rgb(0, 0, 0);
         color: aliceblue;
     }
-</style>
+    </style>
+</head>
 <body>
-    <h1>Welcome to My Soccer Website</h1>
+    <h1 id="red-color">Welcome to My Soccer Website</h1>
     <h2>About My Favorite Team</h2>
-    <p>
-        This website is dedicated to The EPS Soccer Team, <div EPS=""></div>. Here, you will our learn about info on our Soccer Team
+    <p style="color: red;">
+        This website is dedicated to The EPS Soccer Team. Here, you will our learn about info on our Soccer Team
+    </p>
     
-    <h2>Useful Links</h2>
+    <h2 class="blue-color">Useful Links</h2>
     <ul>
-        <li><a href="https://eastsideprepeagles.org/teams/3186232/boys/soccer/varsity"target="_blank"></a>>Official Team Website</a></li>
-        <li><a href="https://eastsideprepeagles.org/teams/3186232/boys/soccer/varsity/schedule"target="_blank"></a>>Upcoming Fixtures</a></li>
-        <li><a href="https://eastsideprepeagles.org/teams/3186232/boys/soccer/varsity/roster" target="_blank">Roster</a></li>
+        <li><a href="https://eastsideprepeagles.org/teams/3186232/boys/soccer/varsity" target="_blank">Official Team Website</a></li>
+        <li><a href="https://eastsideprepeagles.org/teams/3186232/boys/soccer/varsity/schedule " target="_blank">Upcoming Fixtures</a></li>
+        <li><a href="https://eastsideprepeagles.org/teams/3186232/boys/soccer/varsity/roster" target="_blank"> Roster</a></li>
     </ul>
     
     <h2>Team Photo</h2>
-    <img src="image/team.jpg" alt="Team photo of eastsideprepeagles" width="600" height="400">
-    <p>Currently Soccer is something that intrests me, and its pretty cool that we have a team. This year I hope we are able to win a few more games than last year but nonetheless it is about fun!</p>
+    <img src="image/team.jpg" alt="Team photo of eastsideprepeagles">
+    <p>Currently Soccer is something that interests me, and it's pretty cool that we have a team. This year I hope we are able to win a few more games than last year but nonetheless it is about fun!</p>
     <details>
         <summary>Click to view other Eps sports in the spring </summary>
         <ul>
@@ -43,34 +73,30 @@
             <li>COED Track and Field</li>
             <li>COED Rowing/Crew</li>
         </ul>
-
-        
     </details>
-    <iframe width="420" height="315"
-    src="https://www.youtube.com/watch?v=rDlk3M9_JvQ&ab_channel=TrendMax">
-    </iframe>
-
-    <table>
-        <tr>
-            <th>Ronaldo</th>
-            <th>Messi</th>
-            <th>Neymar</th>
-        </tr>
-        <tr>
-            <td>Shooting</td>
-            <td>Dribbling</td>
-            <td>Skills     
-            </td>
-        <tr>
-            <td>10</td>
-            <td>9</td>
-            <td>8</td>
-        </tr>
-        </tr>
-
-
-    </table>
-
-
+    <h2>Extra Info</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.5185235276294!2d51.488197014451224!3d25.42092252882683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45e79240aff901%3A0x78b22e86c6d52895!2sLusail%20Stadium!5e0!3m2!1sen!2sus!4v1679627037711!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/G66T1m2lEDM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <table>
+            <tr>
+                <th>Ronaldo</th>
+                <th>Messi</th>
+                <th>Neymar</th>
+            </tr>
+            <tr>
+                <td>Shooting</td>
+                <td>Dribbling</td>
+                <td>Skills     
+                </td>
+            <tr>
+                <td>10</td>
+                <td>9</td>
+                <td>8</td>
+            </tr>
+            </tr>
+    
+    
+    
+    <div class="animated-square"></div>
 </body>
 </html>
