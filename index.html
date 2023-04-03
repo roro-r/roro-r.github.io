@@ -4,99 +4,131 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Favorite Thing </title>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="css/style.css">
     <style>
-        body { background-color: beige; }
-        #red-color { color: red; }
-        .blue-color { color: blue; }
-        h1 { color: black; }
-        h2 { font-size: 24px; text-align: left; }
-        
-        /* A new CSS feature: box-shadow */
-        img {
-            width: 300px;
-            height: 200px;
-            box-shadow: 0px 4px 6px rgba(69, 141, 186, 0.962);
-        }
+        body {
+    margin: auto;
+    font-family:  sans-serif;
+    overflow: auto;
+    background: linear-gradient(315deg, rgb(237, 237, 237), rgb(171, 212, 236) 98%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+}
 
-        /* The animation code */
-        @keyframes animation {
-          0%   {background-color: yellow;}
-          50%  {background-color: blue;}
-          100% {background-color: yellow;}
-        }
-
-        /* The element to apply the animation to */
-        .animated-square {
-          width: 100px;
-          height: 100px;
-          background-color: yellow;
-          animation-name: animation;
-          animation-duration: 4s;
-          animation-iteration-count: infinite;
-        }
-        table,
-    th,
-    td {
-        border: 1px solid rgb(88, 22, 22);
-        border-collapse:collapse;
-        padding: 10px;
-
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
     }
-    th {
-        background-color: rgb(0, 0, 0);
-        color: aliceblue;
+    50% {
+        background-position: 100% 100%;
     }
-    </style>
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.wave {
+    background: rgb(255 255 255 / 25%);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
+    }
+}
+   </style>
+      
 </head>
 <body>
-    <h1 id="red-color">Welcome to My Soccer Website</h1>
-    <h2>About My Favorite Team</h2>
-    <p style="color: red;">
-        This website is dedicated to The EPS Soccer Team. Here, you will our learn about info on our Soccer Team
-    </p>
-    
-    <h2 class="blue-color">Useful Links</h2>
-    <ul>
-        <li><a href="https://eastsideprepeagles.org/teams/3186232/boys/soccer/varsity" target="_blank">Official Team Website</a></li>
-        <li><a href="https://eastsideprepeagles.org/teams/3186232/boys/soccer/varsity/schedule " target="_blank">Upcoming Fixtures</a></li>
-        <li><a href="https://eastsideprepeagles.org/teams/3186232/boys/soccer/varsity/roster" target="_blank"> Roster</a></li>
-    </ul>
-    
-    <h2>Team Photo</h2>
-    <img src="image/team.jpg" alt="Team photo of eastsideprepeagles">
-    <p>Currently Soccer is something that interests me, and it's pretty cool that we have a team. This year I hope we are able to win a few more games than last year but nonetheless it is about fun!</p>
-    <details>
-        <summary>Click to view other Eps sports in the spring </summary>
-        <ul>
-            <li>Girls Varsity Ultimate Frisbee</li>
-            <li>COED Track and Field</li>
-            <li>COED Rowing/Crew</li>
-        </ul>
-    </details>
-    <h2>Extra Info</h2>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.5185235276294!2d51.488197014451224!3d25.42092252882683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45e79240aff901%3A0x78b22e86c6d52895!2sLusail%20Stadium!5e0!3m2!1sen!2sus!4v1679627037711!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/G66T1m2lEDM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <table>
-            <tr>
-                <th>Ronaldo</th>
-                <th>Messi</th>
-                <th>Neymar</th>
-            </tr>
-            <tr>
-                <td>Shooting</td>
-                <td>Dribbling</td>
-                <td>Skills     
-                </td>
-            <tr>
-                <td>10</td>
-                <td>9</td>
-                <td>8</td>
-            </tr>
-            </tr>
-    
-    
-    
-    <div class="animated-square"></div>
+    <div class="container">
+        <h1 class="logo"></h1>
+        <div class="header">
+            
+         </div>
+         <div class="menu">
+            <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+            <a href="gallery.html">Gallary</a>
+            <a href="contact.html">Contact</a>
+            <a href="Resources.html">Resources</a>
+         </div>
+      </div> 
+
+      <h1>My Passion and Intrest in the World of Football</h1>
+      <div id="gallery"></div>  
+      <img style="height: 300px; width: 50%;  display: block;
+      margin-left: auto;
+      margin-right: auto; " src="image/Trophies.jpeg"> 
+        <p>
+            As a passionate soccer fan, I can certainly relate to your journey of trying out different sports and finally discovering a true love for soccer. Soccer is a sport that offers something for everyone, whether you are a player or a spectator. The fast-paced, dynamic nature of the game keeps you on the edge of your seat, and the teamwork required to succeed makes it a truly collaborative and rewarding experience. Ive tried out many sports such as baseball but the thing about baseball is its not that fast paced, it always seems a bit slow. Also I have tried out basketball and I have never really had the height for that. 
+          </p>
+          <p>
+            One of the things that makes soccer so compelling is the world of professional and international football. There are many different leagues around the world, each with its unique style and culture. From the English Premier League to the Spanish La Liga, the German Bundesliga to the Italian Serie A, there is always exciting soccer being played somewhere in the world.
+          </p>
+          <p>
+            One of the ultimate prizes in club soccer is the <a href="https://en.wikipedia.org/wiki/UEFA_Champions_League" target="_blank" title="Click to see the Champions League Wikipedia page">Champions League</a>. This is a tournament where the top teams from each league in Europe come together to compete for the title of European champions. The tournament is divided into a group stage, where teams play each other in a round-robin format, and a knockout stage, where the top teams compete in a series of one-off matches to determine the winner. The Champions League is widely regarded as the most prestigious club soccer competition in the world, and winning it is the ultimate achievement for any club.
+          </p>
+          <p>
+            In addition to club soccer, there is also international soccer, where national teams compete against each other in various tournaments. The most prestigious of these is the <a href="https://en.wikipedia.org/wiki/FIFA_World_Cup" target="_blank" title="Click to see the World Cup Wikipedia page">World Cup</a>, held every four years, where teams from all over the world come together to compete for the title of world champions. There are also regional tournaments like the European Championship, the Copa America, and the African Cup of Nations, which offer their own unique flavor of international soccer.
+          </p>
+          <h2>Leagues of Football</h2>
+      <ul>
+        <li>English Premier League</li>
+        <li>Spanish La Liga</li>
+        <li>German Bundesliga</li>
+        <li>Italian Serie A</li>
+        <li>French Ligue 1</li>
+        <li>Portuguese Primeira Liga</li>
+        <li>Dutch Eredivisie</li>
+        <li>Scottish Premiership</li>
+        <li>MLS (Major League Soccer)</li>
+      </ul>
+      
+      <div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        
+     </div>
 </body>
 </html>

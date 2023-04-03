@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+ 
+
+.ball {
+            width: 100px;
+            height: 100px;
+            background-image: url('image/soccerball.png');
+            background-size: cover;
+            position: absolute;
+            bottom: -100px;
+            left: 50%;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+</style>
+<body>
+    <div class="container">
+        <h1 class="logo"></h1>
+        <div class="header">
+         </div>
+         <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html">Gallary</a>
+            <a href="contact.html">Contact</a>
+            <a href="resources.html">Resources</a>
+            
+         </div>
+      </div> 
+      <h1>Useful Resources</h1>
+      <p>My passion for soccer has led me to join the school team, where I have the opportunity to represent my school and develop my skills further. The following links are important resources for staying connected with the team, learning about upcoming fixtures, and getting to know the players on the roster.</p>
+      <div id="resources">
+        <ul>
+            <li><a href="https://eastsideprepeagles.org/teams/3186232/boys/soccer/varsity" target="_blank">Official Team Website</a></li>
+            <li><a href="https://eastsideprepeagles.org/teams/3186232/boys/soccer/varsity/schedule " target="_blank">Upcoming Fixtures</a></li>
+            <li><a href="https://eastsideprepeagles.org/teams/3186232/boys/soccer/varsity/roster" target="_blank"> Roster</a></li>
+        </ul>
+        
+        <h2>Team Photo</h2>
+        <img src="image/team.jpg" alt="Team photo of eastsideprepeagles">
+        <p>Currently Soccer is something that interests me, and it's pretty cool that we have a team. This year I hope we are able to win a few more games than last year but nonetheless it is about fun!</p>
+        <details>
+            <summary style="color: grey;" ><strong> Click To view other Eps sports in the spring</strong> </summary>
+            <ul>
+                <li>Girls Varsity Ultimate Frisbee</li>
+                <li>COED Track and Field</li>
+                <li>COED Rowing/Crew</li>
+            </ul>
+        </details>
+        <!-- Add more resources as needed -->
+      </div>    
+      <div class="ball"></div>
+</body>
+</html>

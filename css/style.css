@@ -1,0 +1,98 @@
+.bg-gradient{
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(to right, rgba(31, 31, 31, 0), rgb(7, 104, 121));
+}
+body{
+  padding: 0px;
+  margin: 0px;
+  background: #fffafa;
+}
+.header{
+  background: rgba(0, 0, 0, 0.9);
+  padding: 6px 24px;
+  text-align: left;
+  color: rgb(130, 199, 211);
+  margin: 0px;
+  letter-spacing: 1px;
+  font: caption;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+.menu{
+  position: sticky;
+  top: 0px;
+  background-color: black;
+  margin: 0px;
+  overflow: hidden;
+}
+.menu a{
+  font: "Arial";
+  text-decoration: none;
+  font-size: 18px;
+  letter-spacing: 1px;
+  box-sizing: border-box;
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 16px 24px;
+}
+.menu a:hover{
+  background: #c9cecf;
+  color: black;
+}
+.image-container{
+  position: center;
+  z-index: -5;
+  top: 0px;
+}
+.image-container .image{
+  max-width: 100%;
+  max-height: 100vh;
+}
+.content{
+  padding: 0px 24px;
+  text-align: center;
+  font-size: 35px;
+}
+
+    /* Add Real Madrid theme styles */
+    body {
+      background-color: #FFF;
+      color: #000;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+        color: black;
+    }
+
+    .container {
+      text-align: left;
+    }
+
+    img {
+      width: 300px;
+      height: 200px;
+      margin: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px #202020;
+    }
+
+    /* Add animation styles */
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .real-madrid-logo {
+      animation: pulse 1s infinite;
+    }
+  
