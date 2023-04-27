@@ -1,0 +1,143 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    background: #fffafa;
+  }
+  .header{
+    background: rgba(0, 0, 0, 0.9);
+    padding: 6px 24px;
+    text-align: left;
+    color: rgb(130, 199, 211);
+    margin: 0px;
+    letter-spacing: 1px;
+    font: caption;
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+  .navmenu{
+    position: sticky;
+    top: 0px;
+    background-color: black;
+    margin: 0px;
+    overflow: hidden;
+    grid-column: 1 /span 3;
+    grid-row: 1;
+    z-index: 100;
+}
+  
+  .navmenu a{
+    font: "Arial";
+    text-decoration: none;
+    font-size: 18px;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+    display: inline-block;
+    color: #000000;
+    text-align: center;
+    padding: 16px 24px;
+  }
+  
+  .navmenu a:hover{
+    background: #033157;
+    color: #ffffff;
+  }
+  .image-container{
+    position: center;
+    z-index: -5;
+    top: 0px;
+  }
+  .image-container .image{
+    max-width: 100%;
+    max-height: 100vh;
+  }
+  .content{
+    padding: 0px 24px;
+    text-align: center;
+    font-size: 35px;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto 10%;
+    gap: 10px;
+    background-color: #033157;
+    padding: 10px;
+  }
+  
+  .grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
+
+  .main1{
+    grid-column: 1 /span 2;
+    grid-row: 3;
+
+  }
+  .main2{
+    grid-column: 1 /span 2;
+    grid-row: 4;
+  }
+
+  .sidenav {
+    background-color: red;
+    grid-column: 3;
+    grid-row: 3 / span 2;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+  
+  .sidenav a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #000000;
+  }
+  
+  .sidenav a:hover {
+    background-color: #033157;
+    color: #ffffff;
+  }
+
+  .main-image{
+    grid-column: 1 /span 3;
+    grid-row: 2;
+  }
+
+  .image1, .image2, .image3, .image4, .image5, .image6 {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .image1 {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  
+  .image2 {
+    grid-row: 2;
+    grid-column: 2;
+  }
+  
+  .image3 {
+    grid-row: 3;
+    grid-column: 1;
+  }
+  
+  .image4 {
+    grid-row: 3;
+    grid-column: 2;
+  }
+  
+  .image5 {
+    grid-row: 4;
+    grid-column: 1;
+  }
+  
+  .image6 {
+    grid-row: 4;
+    grid-column: 2;
+  }
