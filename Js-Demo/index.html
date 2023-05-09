@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS messaround</title><style> 
+    .rotate {
+        animation: rotation 2s infinite linear;
+    }
+
+    @keyframes rotation {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(359deg);
+        }
+    }</style>
+</head>
+<body>
+    <h1>Lets learn Java Script </h1>
+    <h2> How do we do onclick events and alerts on an anchor</h2>
+    <a href="https://www.chess.com/home" target="_blank" onclick="alert('warning! you are navigating away from my cool page!')">Chess website </a>
+
+    <hr>
+    <h2> How do we display and hide text</h2>
+
+    <h2> whats my secret identity </h2>
+    <p id="secret" style="display:none"></p>
+    <button onclick="document.getElementById('secret').innerHTML='Batman';document.getElementById('secret').style.display='block'">Reveal!</button>
+    <button onclick="document.getElementById('secret').style.display='none'">Hide!</button>
+
+    <h2> How do we change an image </h2>
+    <img src="images/Charmander.webp" alt="Charmander" id="myImage">
+    <button onclick="document.getElementById('myImage').src='images/Charmander.webp'">Charmander</button>
+    <button onclick="document.getElementById('myImage').src='images/megacharzard.webp'">Mega Charizard</button>
+
+    <h2> How do we change CSS styles with a button?</h2>
+    <p id="alice">Hi. I am Alice</p>
+    <button onclick="document.getElementById('alice').style.color='blue'; document.getElementById('alice').style.fontSize= '25px'">Cake Eat me </button>
+    <button onclick="document.getElementById('alice').style.color='red'; document.getElementById('alice').style.fontSize= '50px'">Potion Drink me </button>
+    <button onclick="document.getElementById('alice').style.color='black'; document.getElementById('alice').style.fontSize= '16px'">Restore me  </button>
+
+    <hr>
+    <h2>How do we return user input with a function </h2>
+   
+    <button onclick="askName()">What's your name?</button>
+    <p id="ask-name"></p>
+
+
+     <h2>Toggle Dark Mode</h2>
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+    <h2>Apply Rotation Animation</h2>
+    <p id="animated-text">This text will rotate!</p>
+    <button onclick="toggleAnimation()">Toggle Rotation Animation</button>
+
+
+    
+    <script>
+        function askName(){
+            let nameParagraph = document.getElementById("ask-name");
+            let name = prompt("What is your name?");
+            // Now we are going to decide what to do
+            if(name.toLowerCase() === "batman"){
+                nameParagraph.innerHTML = "Welcome to the Batcave, sir.";
+            } else {
+                nameParagraph.innerHTML = "Hello, " + name + "! Nice to meet you.";
+            }
+        }
+   
+        function toggleDarkMode() {
+            const body = document.body;
+            body.classList.toggle('dark-mode');
+            if (body.style.backgroundColor === 'black') {
+                body.style.backgroundColor = '';
+                body.style.color = '';
+            } else {
+                body.style.backgroundColor = 'black';
+                body.style.color = 'white';
+            }
+        }
+
+        function toggleAnimation() {
+            const animatedText = document.getElementById('animated-text');
+            animatedText.classList.toggle('rotate');
+        }
+    </script>
+</body>
+</html>
